@@ -1,0 +1,39 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+
+
+{% block content %}
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row text-center">
+                <h1 class="jumbo-welcome">Добро пожаловать на AniLost</h1>
+            </div>
+        </div>
+    </section>
+    <section class="popular-anime">
+        <div class="container">
+            <div class="row text-center">
+                <h2 class="popular-header">Аниме популярные сейчас</h2>
+            </div>
+            <div class="anime">
+                <div class="figures">
+                <figure>
+                    <a href="chainsaw-man"><img src="{% static 'main/img/chainsaw.jpg' %}" alt="ChainsawMan"/></a>
+                    <a href="chainsaw-man"><figcaption>Человек-бензопила</figcaption></a>
+                </figure>
+                </a>
+                <figure>
+                    <a href="mob-psycho"><img src="{% static 'main/img/mob.jpg' %}" alt="MobPsycho" /></a>
+                    <a href="mob-psycho"><figcaption>Моб-психо 100</figcaption></a>
+                </figure>
+                </a>
+                <figure>
+                    <a href="demon-slayer"><img src="{% static 'main/img/klinok.jpg' %}" alt="DemonSlayer" /></a>
+                    <a href="demon-slayer"><figcaption>Клинок рассекающий демонов</figcaption></a>
+                </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
