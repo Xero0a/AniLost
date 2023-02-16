@@ -6,4 +6,5 @@ urlpatterns = [
     path("demon-slayer", views.demonslayer),
     path("mob-psycho", views.mobpsycho),
     path("chainsaw-man", views.chainsawman),
+    path("jenres", views.jenres),
 ]

@@ -12,11 +12,11 @@
   color: white;
 }
 
-.popular-anime {
+.main-content {
   background: black;
 }
 
-.popular-header {
+.main-header {
   margin-top: 5%;
   margin-bottom: 5%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -35,11 +35,15 @@ figure {
   text-align: center;
 }
 
-figure a {
+a {
   color: azure;
   text-decoration: none;
 }
 
-figure a:hover {
+a:hover {
   color: silver;
+}
+
+.main-content {
+  height: 100vh;
 }

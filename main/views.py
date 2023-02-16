@@ -12,3 +12,6 @@ def mobpsycho(request):
 
 def chainsawman(request):
     return render(request, "main/chainsawman.html")
+
+def jenres(request):
+    return render(request, "main/jenres.html")
