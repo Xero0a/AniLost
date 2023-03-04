@@ -19,18 +19,18 @@
             <div class="anime">
                 <div class="figures">
                 <figure>
-                    <a href="chainsaw-man"><img src="{% static 'main/img/chainsaw.jpg' %}" alt="ChainsawMan"/></a>
-                    <a href="chainsaw-man"><figcaption>Человек-бензопила</figcaption></a>
+                    <a href="chainsaw-man"><img src="{{ chainsawman_image.url }}" alt="ChainsawMan"/></a>
+                    <a href="chainsaw-man"><figcaption>{% for el in chainsawman_name %}{{ el.name }}{% endfor %}</figcaption></a>
                 </figure>
                 </a>
                 <figure>
-                    <a href="mob-psycho"><img src="{% static 'main/img/mob.jpg' %}" alt="MobPsycho" /></a>
-                    <a href="mob-psycho"><figcaption>Моб-психо 100</figcaption></a>
+                    <a href="mob-psycho"><img src="{{ mobpsycho_image.url }}" alt="MobPsycho" /></a>
+                    <a href="mob-psycho"><figcaption>{% for el in mobpsycho_name %}{{ el.name }}{% endfor %}</figcaption></a>
                 </figure>
                 </a>
                 <figure>
-                    <a href="demon-slayer"><img src="{% static 'main/img/klinok.jpg' %}" alt="DemonSlayer" /></a>
-                    <a href="demon-slayer"><figcaption>Клинок рассекающий демонов</figcaption></a>
+                    <a href="demon-slayer"><img src="{{ demonslayer_image.url }}" alt="DemonSlayer" /></a>
+                    <a href="demon-slayer"><figcaption>{% for el in demonslayer_name %}{{ el.name }}{% endfor %}</figcaption></a>
                 </figure>
                 </a>
             </div>

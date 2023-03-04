@@ -17,14 +17,11 @@
             </div>
             <div class="row m-2 pb-5">
                 <div class="col">
+                    {% for el in name %}
                     <ul>
-                        <a href="jenres/action"><li>Боевик</li></a>
-                        <a href="jenres/mysthic"><li>Мистика</li></a>
-                        <a href="jenres/romantic"><li>Романтика</li></a>
-                        <a href="jenres/everyday-life"><li>Повседневность</li></a>
-                        <a href="jenres/comedy"><li>Комедия</li></a>
-                        <a href="jenres/adventure"><li>Приключения</li></a>
+                        <a href="jenres/"><li>{{ el.name_genre }}</li></a>
                     </ul>
+                    {% endfor %}
                 </div>
             </div>
         </div>

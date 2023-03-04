@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'main/css/anime.css' %}"/>
+{% endblock %}
+{% block title %}Человек-бензопила{% endblock %}
+{% block content %}
+    <section class="jumbotron" style="background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8)),
+            url({{ jumbotron.url }}); background-size: cover;">
+        <div class="container">
+            <div class="row text-center">
+                <h1 class="jumbo-welcome">Человек-бензопила</h1>
+            </div>
+        </div>
+    </section>
+    <section class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    <img
+                            class="anime-img"
+                            src="{{ image.url }}"
+                            alt="chainsaw"
+                    />
+                </div>
+                <div class="col-lg-7 col-md-7 col-xs-7">
+                    {% for el in name %}
+                    <p class="description">{{ el.description }}</p>
+                    {% endfor %}
+                    <p class="genres">
+                    Жанр:
+                    {% for el in genre %}
+                        {{ el }}
+                    {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
