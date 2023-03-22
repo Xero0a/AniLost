@@ -1,42 +1,38 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 {% block link %}
-    <link rel="stylesheet" href="{% static 'main/css/anime.css' %}"/>
+<link rel="stylesheet" href="{% static 'main/css/anime.css' %}" />
 {% endblock %}
 {% block title %}Клинок рассекающий демонов{% endblock %}
 {% block content %}
-    <section class="jumbotron" style="background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8)),
+<section class="jumbotron" style="background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8)),
     url({% static 'main/img/demonjumbotron.jpg' %}); background-size: cover;">
-        <div class="container">
-            <div class="row text-center">
-                <h1 class="jumbo-welcome">Клинок рассекающий демонов</h1>
+    <div class="container">
+        <div class="row text-center">
+            <h1 class="jumbo-welcome">Клинок рассекающий демонов</h1>
+        </div>
+    </div>
+</section>
+<section class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-3">
+                <img class="anime-img" src="{% static 'main/img/klinok.jpg' %}" alt="DemonSlayer" />
+            </div>
+            <div class="col-lg-7 col-md-7 col-xs-7">
+                <p class="description">
+                    Эпоха «Тайсё» была полна неожиданностей. Много легенд нашли свое
+                    логическое подтверждение в те года. Люди давненько стали думать о
+                    присутствии демонов в гущах леса. И эти существа были крайне опасны и
+                    кровожадны. В ночное время суток они вели охоту на людей, убивая
+                    невинных граждан, демоны питались их плотью. Однако со временем эти
+                    легенды стали больше напоминать сказки. Подобных инцидентов в лесах не
+                    происходило, люди перестали верить. И было это зря, ведь несколько лет
+                    назад с отцом главного героя – Танджиро Камадо случилась неприятность.
+                </p>
+                <p class="genres">Жанр: боевик, мистика</p>
             </div>
         </div>
-    </section>
-    <section class="main-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-xs-3">
-                    <img
-                            class="anime-img"
-                            src="{% static 'main/img/klinok.jpg' %}"
-                            alt="DemonSlayer"
-                    />
-                </div>
-                <div class="col-lg-7 col-md-7 col-xs-7">
-                    <p class="description">
-                        Эпоха «Тайсё» была полна неожиданностей. Много легенд нашли свое
-                        логическое подтверждение в те года. Люди давненько стали думать о
-                        присутствии демонов в гущах леса. И эти существа были крайне опасны и
-                        кровожадны. В ночное время суток они вели охоту на людей, убивая
-                        невинных граждан, демоны питались их плотью. Однако со временем эти
-                        легенды стали больше напоминать сказки. Подобных инцидентов в лесах не
-                        происходило, люди перестали верить. И было это зря, ведь несколько лет
-                        назад с отцом главного героя – Танджиро Камадо случилась неприятность.
-                    </p>
-                    <p class="genres">Жанр: боевик, мистика</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
