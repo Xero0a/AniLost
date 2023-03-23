@@ -18,6 +18,6 @@ def view_anime(request, anime_id):
 
 def jenres(request):
 
-    name = Genre.objects.all()
-    
-    return render(request, "main/jenres.html", {"name": name})
+    genres = Genre.objects.all()
+
+    return render(request, "main/jenres.html", {"genres": genres})
