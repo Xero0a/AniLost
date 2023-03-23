@@ -18,21 +18,12 @@
             </div>
             <div class="anime">
                 <div class="figures">
+                {% for el in animes %}
                 <figure>
-                    <a href="chainsaw-man"><img src="{{ chainsawman_image.url }}" alt="ChainsawMan"/></a>
-                    <a href="chainsaw-man"><figcaption>{% for el in chainsawman_name %}{{ el.name }}{% endfor %}</figcaption></a>
+                    <a href="anime={{ el.id }}"><img src="{{ el.image.url }}"/></a>
+                    <a href="anime={{ el.id }}"><figcaption>{{ el.name }}</figcaption></a>
                 </figure>
-                </a>
-                <figure>
-                    <a href="mob-psycho"><img src="{{ mobpsycho_image.url }}" alt="MobPsycho" /></a>
-                    <a href="mob-psycho"><figcaption>{% for el in mobpsycho_name %}{{ el.name }}{% endfor %}</figcaption></a>
-                </figure>
-                </a>
-                <figure>
-                    <a href="demon-slayer"><img src="{{ demonslayer_image.url }}" alt="DemonSlayer" /></a>
-                    <a href="demon-slayer"><figcaption>{% for el in demonslayer_name %}{{ el.name }}{% endfor %}</figcaption></a>
-                </figure>
-                </a>
+                {% endfor %}
             </div>
         </div>
     </section>

@@ -13,6 +13,7 @@ class Anime(models.Model):
     name = models.CharField(max_length=300, verbose_name="Аниме")
     description = models.TextField(verbose_name="Описание")
     image = models.ImageField(verbose_name="Картинка", upload_to="img/")
+    jumbotron = models.ImageField(verbose_name="Главная картинка", upload_to="img/")
     genre = models.ManyToManyField(Genre, through='AnimeGenre')
 
     def __str__(self):
@@ -35,7 +36,3 @@ class AnimeAdmin(admin.ModelAdmin):
 
 class GenreAdmin(admin.ModelAdmin):
     inlines = (AnimeGenreInline,)
-
-class Jumbotron(models.Model):
-    anime = models.ForeignKey("Anime", on_delete=models.DO_NOTHING)
-    jumbotron_image = models.ImageField(upload_to="img/")

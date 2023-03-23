@@ -3,13 +3,13 @@
 {% block link %}
     <link rel="stylesheet" href="{% static 'main/css/anime.css' %}"/>
 {% endblock %}
-{% block title %}{% for el in name %}{{ el.name }}{% endfor %}{% endblock %}
+{% block title %}{{ anime.name }}{% endblock %}
 {% block content %}
     <section class="jumbotron" style="background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8)),
-            url({{ jumbotron.url }}); background-size: cover;">
+            url({{ anime.jumbotron.url }}); background-size: cover;">
         <div class="container">
             <div class="row text-center">
-                <h1 class="jumbo-welcome">{% for el in name %}{{ el.name }}{% endfor %}</h1>
+                <h1 class="jumbo-welcome">{{ anime.name }}</h1>
             </div>
         </div>
     </section>
@@ -19,17 +19,15 @@
                 <div class="col-lg-3 col-md-3 col-xs-3">
                     <img
                             class="anime-img"
-                            src="{{ image.url }}"
+                            src="{{  anime.image.url }}"
                             alt="chainsaw"
                     />
                 </div>
                 <div class="col-lg-7 col-md-7 col-xs-7">
-                    {% for el in name %}
-                    <p class="description">{{ el.description }}</p>
-                    {% endfor %}
+                    <p class="description">{{ anime.description }}</p>
                     <p class="genres">
                     Жанр:
-                    {% for el in genre %}
+                    {% for el in anime.genre.all %}
                         {{ el }}
                     {% endfor %}
                     </p>
