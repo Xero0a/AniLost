@@ -11,19 +11,21 @@
             </div>
         </div>
     </section>
-    <section class="main-content">
+    <section class="main-content pb-5">
         <div class="container">
             <div class="row text-center">
                 <h2 class="main-header">Аниме популярные сейчас</h2>
             </div>
-            <div class="anime">
+            <div class="row pb-5">
+            <div class="col-8 col-sm-8 col-md-8 col-xl-8"></div>
                 <div class="figures">
                 {% for el in animes %}
                 <figure>
-                    <a href="anime={{ el.id }}"><img src="{{ el.image.url }}"/></a>
+                    <a href="anime={{ el.id }}"><img src="{{ el.image.url }}" class="img-fluid"/></a>
                     <a href="anime={{ el.id }}"><figcaption>{{ el.name }}</figcaption></a>
                 </figure>
                 {% endfor %}
+            </div>
             </div>
         </div>
     </section>

@@ -24,6 +24,12 @@
   color: silver;
 }
 
+.anime {
+  display: flex;
+  justify-content: space-around;
+}
+
+
 .figures {
   display: flex;
   flex-direction: row;
@@ -42,8 +48,4 @@ a {
 
 a:hover {
   color: silver;
-}
-
-.main-content {
-  height: 100vh;
 }
