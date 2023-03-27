@@ -1,23 +1,33 @@
 from django.shortcuts import render
+from django.views import View
 from .models import Genre, Anime
 
 
-def index(request):
-    
-    animes = Anime.objects.all()
-    
-    return render(request, "main/index.html", {"animes": animes})
+class IndexView(View):
+    """Отображает главную страницу сайта"""
+
+    def get(self, request):
+        
+        animes = Anime.objects.all()
+        
+        return render(request, "main/index.html", {"animes": animes})
 
 
-def view_anime(request, anime_id):
+class AnimeView(View):
+    """Отображает страницу с информацией по отдельному аниме"""
 
-    anime = Anime.objects.get(id=anime_id)
+    def get(self, request, anime_id):
 
-    return render(request, "main/anime.html", {"anime": anime})
+        anime = Anime.objects.get(id=anime_id)
+
+        return render(request, "main/anime.html", {"anime": anime})
 
 
-def jenres(request):
+class GenreView(View):
+    """Отображает страницу жанров"""
 
-    genres = Genre.objects.all()
+    def genres(self, request):
 
-    return render(request, "main/jenres.html", {"genres": genres})
+        genres = Genre.objects.all()
+
+        return render(request, "main/genres.html", {"genres": genres})
