@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
 from django.core.paginator import Paginator
-from .models import Genre, Anime
+from .models import Genre, Anime, AnimeGenre
 
 
 class IndexView(ListView):
@@ -37,3 +37,16 @@ class GenreView(View):
         genres = Genre.objects.all()
 
         return render(request, "main/genres.html", {"genres": genres})
+
+
+class AnimeGenreView(View):
+    """Отображает аниме выбранного жанра"""
+
+    def get(self, request, genre_id):
+
+        genre = Genre.objects.get(id=genre_id)
+
+        animes = Anime.objects.filter(genre=genre_id)
+
+        return render(request, "main/animegenre.html", {"animes": animes, "genre": genre})
+

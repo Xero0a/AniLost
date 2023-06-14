@@ -19,7 +19,7 @@
                 <div class="col">
                     {% for el in genres %}
                     <ul>
-                        <a href="genres/"><li>{{ el.name_genre }}</li></a>
+                        <a href="genre={{ el.id }}"><li>{{ el.name_genre }}</li></a>
                     </ul>
                     {% endfor %}
                 </div>
