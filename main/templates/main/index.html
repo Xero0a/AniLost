@@ -19,13 +19,21 @@
             <div class="row pb-5">
             <div class="col-8 col-sm-8 col-md-8 col-xl-8"></div>
                 <div class="figures">
-                {% for el in animes %}
+                {% for el in page_obj %}
                 <figure>
                     <a href="anime={{ el.id }}"><img src="{{ el.image.url }}" class="img-fluid"/></a>
                     <a href="anime={{ el.id }}"><figcaption>{{ el.name }}</figcaption></a>
                 </figure>
                 {% endfor %}
             </div>
+            <nav aria-label="Page navigation exame">
+                <ul class="pagination justify-content-center mt-5">
+                  {% for p in page_obj.paginator.page_range %}
+                  <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+                  {% endfor%}  
+                </ul>
+              </nav>
+            </nav>
             </div>
         </div>
     </section>
