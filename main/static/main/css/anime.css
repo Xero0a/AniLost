@@ -12,12 +12,15 @@
 .main-content {
   background: black;
   padding-bottom: 10%;
+  
 }
 
+.description {
+  color: aliceblue;
+}
 
 .genres {
   justify-content: center;
   padding-top: 3%;
-  padding-left: 20%;
   color: white;
 }

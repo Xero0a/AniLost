@@ -26,7 +26,7 @@ class AnimeView(View):
 class GenreView(View):
     """Отображает страницу жанров"""
 
-    def genres(self, request):
+    def get(self, request):
 
         genres = Genre.objects.all()
 
