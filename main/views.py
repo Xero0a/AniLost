@@ -11,7 +11,7 @@ class IndexView(ListView):
     def get(self, request):
         
         animes = Anime.objects.all()
-        paginator = Paginator(animes, 1)
+        paginator = Paginator(animes, 3)
 
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
