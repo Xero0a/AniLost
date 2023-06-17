@@ -1,3 +1,5 @@
+from typing import Any, Dict
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
@@ -50,3 +52,20 @@ class AnimeGenreView(View):
 
         return render(request, "main/animegenre.html", {"animes": animes, "genre": genre})
 
+
+class SearchAnime(ListView):
+    """Поиск на сайте по названию аниме или по жанру"""
+
+    template_name = "main/index.html"
+    context_object_name ="page_obj"
+
+    def get_queryset(self):
+
+        return Anime.objects.filter(name__iregex=self.request.GET.get("q"))
+
+    def get_context_data(self, *args, **kwargs):
+    
+        context = super().get_context_data(*args, **kwargs)
+        context["q"] = self.request.GET.get("q")
+
+        return context

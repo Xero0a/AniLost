@@ -51,6 +51,11 @@ a:hover {
   color: silver;
 }
 
+.pagination {
+  --bs-pagination-border-color: none;
+}
+
+
 .pagination > li > a
 {
     background-color: rgb(20, 20, 20); 
